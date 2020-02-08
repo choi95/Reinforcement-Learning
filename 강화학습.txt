@@ -1,0 +1,26 @@
+Multi armed bandit 
+- 오직 하나의 상태에서 독립된 여러개의 행동 중 하나를 선택
+
+k-armed bandit problem
+매 시도마다 k개의 슬롯머신 중에서 하나를 선택한다.
+
+q*(a) = E[Rt|At = a]
+
+Action value가 가장 높은 행동 선택
+
+우리는 optimal action value에 대한 정보를 사전에 가지고 있지 않기에 실험을 반복하여 얻은 결과를 토대로 어떤 추정을 할 수 있다.
+
+추정함수 Qt(a) 추정이 action value에 가까워지면 객관적으로 좋은 행동을 선택할 수 있다.
+
+Greedy actions : 매 시도에서 Q 함수의 값이 가장 높은 action들의 집합
+Exploiting : Greedy action중 한가지 action선택
+Exploring : 탐험을 위해 non-greedy actions 중 한가지 action 선택
+
+그리디 메소드의 성능비교를 위한 간단한 실험
+time step마다 평균 보상과 optimal action selection의 비율을 그래프로 출력
+
+*MDP 목표를 이루기 위해 상호작용으로부터 학습하는 문제
+ sensation, action, goal
+즉각적인 보상과 지연보상간의 trade-off
+
+에이전트와 환경간의 상호작용이 자연스럽게 여러개의 subsequence로 나뉘어 질 수 있을때 하나의 sub를 episode라 부른다.
